@@ -1,5 +1,8 @@
 {
-    "baseURL": "http://informatique.centrale-marseille.fr/tutos/",
+    "baseURL": "/",
+    "relativeURLs": true,
+    "uglyurls": true,
+    
     "languageCode": "fr-fr",
     "title": "Tutoriaux",
 
@@ -20,17 +23,17 @@
         "global": [
             {
                 "name": "Catégories",
-                "url": "/categories/"
+                "url": "/categories.html"
             }, 
             {
                 "name": "Tags",
-                "url": "/tags/"
+                "url": "/tags.html"
             }
         ],
         "footer": [
             {
                 "name": "About",
-                "url": "/page/about/"
+                "url": "/page/about.html"
             }
         ]
     }

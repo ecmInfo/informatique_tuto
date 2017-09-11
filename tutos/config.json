@@ -3,7 +3,7 @@
     "languageCode": "fr-fr",
     "title": "Tutoriaux",
 
-    "theme": "theme_hugo_ecm",
+    "theme": "informatique_hugo_theme",
     
     "params": {
         "description": "Tutoriaux pour prendre en main les différents outils utilisés pendant les cours",

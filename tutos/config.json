@@ -1,0 +1,37 @@
+{
+    "baseURL": "http://informatique.centrale-marseille.fr/tutos/",
+    "languageCode": "fr-fr",
+    "title": "Tutoriaux",
+
+    "theme": "gentoo",
+    
+    "params": {
+        "description": "Tutoriaux pour prendre en main les différents outils utilisés pendant les cours",
+        "copyright": "2017",
+        "social": {
+            "github": "https://github.com/ecmInfo"
+        }        
+    },
+    "taxinomies": {
+        "category": "categories",
+        "tag": "tags"        
+    },
+    "menu": {
+        "global": [
+            {
+                "name": "Catégories",
+                "url": "/categories/"
+            }, 
+            {
+                "name": "Tags",
+                "url": "/tags/"
+            }
+        ],
+        "footer": [
+            {
+                "name": "About",
+                "url": "/page/about/"
+            }
+        ]
+    }
+}

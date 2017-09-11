@@ -3,7 +3,7 @@
     "languageCode": "fr-fr",
     "title": "Tutoriaux",
 
-    "theme": "gentoo",
+    "theme": "theme_hugo_ecm",
     
     "params": {
         "description": "Tutoriaux pour prendre en main les différents outils utilisés pendant les cours",

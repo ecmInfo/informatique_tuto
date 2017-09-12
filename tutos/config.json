@@ -2,10 +2,11 @@
     "baseURL": "/",
     "relativeURLs": true,
     "uglyurls": true,
+    "enableEmoji": true,
     
     "languageCode": "fr-fr",
     "title": "Tutoriaux",
-
+    
     "theme": "informatique_hugo_theme",
     
     "params": {

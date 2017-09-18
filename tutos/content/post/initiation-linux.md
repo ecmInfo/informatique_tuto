@@ -60,7 +60,7 @@ Dans {{< menu_code >}}application > internet {{< /menu_code >}} : Firefox ou Chr
 ## Ressources internet
 
   - le [courde Laurent Tichits](http://www.dil.univ-mrs.fr/%7Etichit/unix/index.html)  de Laurent Tichit, en particulier son [aide mémoire](http://www.dil.univ-mrs.fr/%7Etichit/unix/AideMemoire.pdf)
-  - le [wiki de l'ensimag](https://ensiwiki.ensimag.fr/index.php?title=Portail:Linux) avec plein de petits articles sur la ligne de commande et linux en général.
+  - le [cours de l'isima](http://fc.isima.fr/~loic/unixc.php). Une bonne introduction aux commandes en général.
   - le site [des tuteurs à l'ens](http://www.tuteurs.ens.fr/unix/) plein de resources. Didactique.
 
 ## fichiers

@@ -43,14 +43,14 @@ Les commentaires en Python se font à l'aide de `#`.
   * Complexes (la notation utilise j à la place de i)
   * Booléens
 
-Afin de connaître la classe d'un objet on peut utiliser la fonction `type` : 
+Afin de connaître la classe d'un objet, on peut utiliser la fonction `type` : 
 {{< highlight python>}}
 type(42) 
 {{< /highlight >}}
 Rendra : `<class 'int'>`
 
 
-On peut créer des objets de classes différentes  avec des fonctions telles que:
+On peut créer des objets de classes différentes avec des fonctions telles que:
 
   - str()
   - float()
@@ -64,21 +64,19 @@ On peut créer des objets de classes différentes  avec des fonctions telles que
 
 ### Variables 
 
-Une variable est un nom auquel est associée un objet. Pour associer un nom à un objet on utilise l’opérateur
-d’affectation = tel que:
+Une variable est un nom auquel est associé un objet. Pour associer un nom à un objet on utilise l’opérateur d’affectation = tel que:
 
 {{< highlight python>}}
 nom = objet
 {{< /highlight >}}
 
-A gauche de l’opérateur `=` se trouve un nom (en gros, quelque chose ne pouvant commencer par un nombre)
-et à droite un objet.
+A gauche de l’opérateur `=` se trouve un nom (en gros, quelque chose ne pouvant commencer par un nombre) et à droite un objet.
 
 {{< note warning >}}
 Un nom n'est **PAS** une chaîne de caractères. Une chaîne de caractère est un objet alors qu’un nom n’est qu’un alias vers un objet.
 {{< /note>}}
 
-Il est important de comprendre que l’opérateur d’affectation = n’est pas symétrique. A gauche des noms.
+Il est important de comprendre que l’opérateur d’affectation = n’est pas symétrique. À gauche, des noms et à droite, des objets.
 
 Attardons nous un moment sur ces notions car elles seront cruciales plus tard pour appréhender les possibilités offertes par les objets.
 
@@ -113,14 +111,14 @@ i, j = j, i
 
 > https://docs.python.org/3.4/tutorial/datastructures.html#more-on-lists
 
-##### Création Directe 
+##### Création directe 
 
 On peut créer une liste directement:
 
-  - Soit en créant une liste vide puis en ajoutant des éléments un à un. `l = []`
-  - Soit en créant la liste déjà pré-remplie. `l = [1, 2, True, "Hello World"]`. Cette liste contient 4 éléments et est **__indexée à 0__**. 
+  - Soit en créant une liste vide puis en ajoutant des éléments un à un. `l = []` `l.append(1)`
+  - Soit en créant la liste déjà pré-remplie. `l = [1, 2, True, "Hello World"]`. Cette liste contient 4 éléments et est **__indexée à partir de 0__**. 
 
-La fonction `len()`  permet d'obtenir la longueur de la liste. Sur le dernier exemple, <code python>len(l)</code> rend 4.
+La fonction `len()` permet d'obtenir la longueur de la liste. Sur le dernier exemple, <code python>len(l)</code> rend 4.
 On peut alors accéder aux éléments de la liste à l'aide d'un indice variant entre 0 et len(l) - 1. Ainsi  avec <code python>l[3]</code> on obtient la chaîne de caractère "Hello World".
 
 ##### Création à l'aide de range() 
@@ -146,7 +144,7 @@ Il n'est pas nécessaire de renseigner tous les champs.
 > https://docs.python.org/3.4/library/stdtypes.html?highlight=dict#mapping-types-dict
 
 
-Un dictionnaire (ou [tableau associatif](http://fr.wikipedia.org/wiki/Tableau_associatif)) permet d'associer des clés à des valeurs, ces clés pouvant être des chaines de caractères ou des nombres. C'est en gros comme une 'liste' où l'on remplace les indices par à peu près que l'on veut.
+Un dictionnaire (ou [tableau associatif](http://fr.wikipedia.org/wiki/Tableau_associatif)) permet d'associer des clés à des valeurs, ces clés pouvant être des chaines de caractères ou des nombres. C'est en gros comme une 'liste' où l'on remplace les indices par à peu près ce que l'on veut.
 
 {{< highlight python>}}
 d = {} #on crée un dictionnaire vide
@@ -159,12 +157,12 @@ for cle in d:
 {{< /highlight >}}
 
 {{< note warning >}}
-Un dictionnaire n'est pas ordonné
+Un dictionnaire n'est pas ordonné.
 {{< /note >}}
+
 #### Les ensembles : set 
 
 > https://docs.python.org/3.4/library/stdtypes.html?highlight=dict#set
-
 
 Un ensemble permet de garder des données en mémoire de manière non indexée. Contrairement aux listes, où l'on rangeait les éléments dans des cases distinctes, on ne peut **pas** accéder aux éléments d'un ensemble `d` avec `d[i]`.
 
@@ -199,23 +197,22 @@ t2 = t + (1, )
 Le **frozenset** est un set (ensemble), mais cette fois non mutable.
 
 
+## Structures de contrôle
 
-## structures de contrôle
-
-### comparaisons 
+### Comparaisons 
 
 > https://docs.python.org/3.4/library/stdtypes.html#comparisons
 
-### blocs
+### Blocs
 
-On a souvent besoin de n'exécuter un certain bout de code que si une comparaison particulière est vraie(True). Ce bout de code est appelé **bloc**
+On a souvent besoin de n'exécuter un certain bout de code que si une comparaison particulière est vraie (True). Ce bout de code est appelé **bloc**
 
 Tous les blocs sont définis de la même manière :
 
   - Ce qui va identifier le bloc pour son exécution (une condition, son nombre d'exécution, son nom).
   - Les instructions le constituant.
 
-Pour séparer les blocs les un des autres, et savoir ce qui le défini , le langage Python utilise l'indentation(4 espaces): un bloc est donc une suite d'instructions ayant la même indentation.
+Pour séparer les blocs les un des autres, et savoir ce qui le définit, le langage Python utilise l'indentation(4 espaces): un bloc est donc une suite d'instructions ayant la même indentation.
 
 {{< highlight python>}}
 question = "A quelle heure on mange ?"
@@ -239,7 +236,7 @@ L’indentation est  **primordiale** en python.
 
 >Nous allons utiliser la convention classique : chaque bloc sera indenté de 4 espaces supplémentaire par
 rapport au bloc parent. Pour ne pas passer son temps à compter les espaces à ajouter pour chaque bloc,
-on pourra utiliser la la **touche tabulation** en modifiant son fonctionnement (remplacement du caractère
+on pourra utiliser la **touche tabulation** en modifiant son fonctionnement (remplacement du caractère
 tabulation par des espaces, cela est déjà prédéfini avec PyCharm) et est disponible dans tout bon éditeur.
 
 En python, toute ligne définissant un nouveau bloc doit être terminée par le caractère **:**
@@ -292,7 +289,7 @@ while b > 0:
 
 #### Les itérateurs 
 
-Pour faire simple, les littérateurs sont des objets qui permettent de créer des suites de données.
+Pour faire simple, les itérateurs sont des objets qui permettent de créer des suites de données.
 Prenons un exemple connu: `range()`
 
 range permet de créer des itérateurs : `range(10)` est un itérateur qui va renvoyer les valeurs de 0 à 9.
@@ -303,7 +300,7 @@ Exemple :
 
 {{< highlight python>}}
 mon_iterateur = range(10)
-for y in mon_iterateur:
+for x in mon_iterateur:
     print(x)
 {{< /highlight >}}  
 
@@ -354,7 +351,7 @@ Pour cela, on utilise des *fonctions*.
 
 Une fonction est un [bloc]({{< relref "#blocs" >}}) auquel on donne un nom (le nom de la fonction) qui peut être exécuté lorsqu'on l'invoque par son nom. 
 
-La partie de programme suivant défini une fonction:
+La partie de programme suivant définit une fonction:
 {{< highlight python>}}
 def bonjour():
     print("Salutations")
@@ -367,7 +364,7 @@ La première ligne est la définition du bloc fonction. Il contient :
   - des parenthèses qui pourront contenir des paramètres (on verra ça plus tard)
   - le **:** qui indique que la ligne d'après va commencer le bloc proprement dit
   
-Ensuite vient le bloc fonction en lui même qui ne contient qu'une seule ligne.
+Ensuite vient le bloc fonction en lui-même qui ne contient qu'une seule ligne.
 
 Si on exécute le bloc précédent, il ne se passe rien. En effet on n'a fait que définir la fonction. Pour l'utiliser, ajoutez `bonjour()` à la suite du bloc.
 
@@ -385,7 +382,7 @@ def plus_moins(nombre):
         print("Inférieur à 42")
 {{< /highlight >}}
 
-Cette fonction nécessite donc un paramètre pour être invoquée. Testez alors `plus_moins(17)`
+Cette fonction nécessite donc un paramètre pour être invoquée. Testez alors `plus_moins(17)`.
 La variable nombre sera associée à l'objet entier de valeur 17 dans la fonction. La variable nombre n'existe que dans la fonction.
 
 {{< note warning>}}
@@ -394,7 +391,7 @@ Les *paramètres* d'une fonction sont des __**NOMS**__ de variables qui ne seron
 
 #### Retour d'une fonction 
 
-Toute fonction rend une valeur. On utilise le mot-clef `return` suivi de la valeur à rendre pour cela. Le fonction suivante rend le double de la valeur de l'objet passé en paramètre:
+Toute fonction peut rendre une valeur. On utilise le mot-clef `return` suivi de la valeur à rendre pour cela. Le fonction suivante rend le double de la valeur de l'objet passé en paramètre:
 
 {{< highlight python>}}
 def double(valeur):
@@ -402,7 +399,7 @@ def double(valeur):
     return x
 {{< /highlight >}}
 
-Il ne sert à rien de mettre des instructions après une instruction `return` car dès qu'une fonction exécute cette instruction, elle s'arrête en rendant l'objet en paramètre. Le retour d'une fonction est pratique pour calculer des chose et peut ainsi être affecté à une variable.
+Il ne sert à rien de mettre des instructions après une instruction `return` car dès qu'une fonction exécute cette instruction, elle s'arrête en rendant l'objet en paramètre. Le retour d'une fonction est pratique pour calculer des choses et peut ainsi être affecté à une variable.
 
 Ainsi, avec la fonction double précédemment définie, testez :
 
@@ -411,7 +408,7 @@ x = double(21)
 print(x)
 {{< /highlight >}}
 
-Le code précédent exécute la fonction de nom `double` avec comme paramètre un entier de valeur 21. La fonction commence par associer à une variable nommée `valeur` l'objet passé en paramètre (ici un entier de valeur `21`), puis crée une variable de nom `x` à laquelle est associée un entier de valeur `42` et enfin se termine en retournant comme valeur l'objet de nom `x`. Les variables `valeur` et `x` définies à l'intérieur de la fonction sont ensuite effacés (pas les objets, seulement les noms).
+Le code précédent exécute la fonction de nom `double` avec comme paramètre un entier de valeur 21. La fonction commence par associer à une variable nommée `valeur` l'objet passé en paramètre (ici un entier de valeur `21`), puis crée une variable de nom `x` à laquelle est associée un entier de valeur `42` et enfin se termine en retournant comme valeur l'objet de nom `x`. Les variables `valeur` et `x` définies à l'intérieur de la fonction sont ensuite effacées (pas les objets, seulement les noms).
 
 Cette valeur retournée est utilisée par la commande `print` pour être affichée à l'écran.
 
@@ -452,7 +449,7 @@ Les noms des objets sont accessibles à l’intérieur du ''bloc unitaire'' dans
   - les modules (nous verrons cela),
   - les classes (que nous ne verrons pas).
 
-Les variables définies dans une fonction cachent les variables définis dans des blocs supérieurs. Ainsi,
+Les variables définies dans une fonction cachent les variables définies dans des blocs supérieurs. Ainsi,
 le code suivant imprime 42 puisque la variable `x` déclarée dans le bloc unitaire de la fonction n'existe plus dans son bloc parent. La variable `x` valant 42 est masquée dans la fonction par une nouvelle variable de nom `x` valant 24.
 
 {{< highlight python>}}
@@ -503,11 +500,11 @@ print(x)
 
 ![nom et objets](/img/python/obj_nom.png#center)
 
-La figure précédente montre ce qu'il s'est passé dans le monde des noms et des objets. Il reste un objet sans nom après l'exécution de la fonction (un entier valant 9), il est détruit. On a pu ainsi modifier un objet sans utiliser de retour de fonction. C'est une technique puissante mais à n'utiliser qu'à bon essient.
+La figure précédente montre ce qu'il s'est passé dans le monde des noms et des objets. Il reste un objet sans nom après l'exécution de la fonction (un entier valant 9), il est détruit. On a pu ainsi modifier un objet sans utiliser de retour de fonction. C'est une technique puissante mais à n'utiliser qu'à bon escient.
 
 ### Modules
 
-Un *module* (aussi appelé *bibliothèque* ou *library*) est un ensemble de fonctions utiles, utilisable dans de nombreux programmes. Plutôt que de refaire à chaque fois ces fonctions ou (c'est pire) de les copier/coller dans chaque programme on les importe directement pour les utiliser.
+Un *module* (aussi appelé *bibliothèque* ou *library*) est un ensemble de fonctions utiles, utilisables dans de nombreux programmes. Plutôt que de refaire à chaque fois ces fonctions ou (c'est pire) de les copier/coller dans chaque programme, on les importe directement pour les utiliser.
 
 
 {{< note >}}
@@ -519,7 +516,7 @@ Pour utiliser un module, il faut commencer par l'importer avec la commande `impo
 
 #### Importation directe du module
 
-On mets le nom complet avant chaque appel :
+On met le nom complet avant chaque appel :
 
 {{< highlight python>}}
 import math
@@ -538,7 +535,7 @@ x = cos(pi / 2)
 
 #### Importation de toutes les fonctions du modules
 
-Déconseillée dans la plupart des cas. On ne sait pas vraiment ce qui a été importé.
+Déconseillée dans la plupart des cas car on ne sait pas vraiment ce qui a été importé.
 
 {{< highlight python>}}
 from math import *
@@ -562,15 +559,15 @@ Si vous n'avez pas de droits administrateur, ou pour une utilisation plus "pro" 
 > https://docs.python.org/3/library/random.html
 
 
-Regardez [ces exemples](http://www.dsimb.inserm.fr/~fuchs/python/python-node9.html) Pour le module random.
+Regardez [ces exemples](http://www.dsimb.inserm.fr/~fuchs/python/python-node9.html) pour le module random.
 
-Installé par défaut, permet notamment de mélanger les éléments d'une liste, générer un nombre aléatoire, choisir un élément aléatoire dans une liste... Vous pouvez même simuler une loi gaussienne (si, si).
+Installé par défaut, il permet notamment de mélanger les éléments d'une liste, générer un nombre aléatoire, choisir un élément aléatoire dans une liste... Vous pouvez même simuler une loi gaussienne (si, si).
 
 ##### openpyxl 
 
 > http://openpyxl.readthedocs.org
 
-permet de manipuler des [fichiers excel avec python](https://automatetheboringstuff.com/chapter12/).
+Permet de manipuler des [fichiers excel avec python](https://automatetheboringstuff.com/chapter12/).
 
 Il s'installe avec pip3: `pip3 install openpyxl` (ou `sudo pip3 install openpyxl` suivi de votre mot de passe si vous êtes sous unix/mac).
 
@@ -594,7 +591,7 @@ Permet d'utiliser python de façon interactive (il s'installe aisément avec pip
 
 
 Comme on l'a vu les objets sont partout en python, qu'ils soient int, str, float, ou même des fonctions.
-Si vous avec bien compris l'exemple de la récursion et du la modification d'un objet passé en paramètre, alors vous vous demandez peut-être "pourquoi ne pas envoyer une fonction en paramètre d'une autre fonction ?"
+Si vous avez bien compris l'exemple de la récursion et de la modification d'un objet passé en paramètre, alors vous vous demandez peut-être "pourquoi ne pas envoyer une fonction en paramètre d'une autre fonction ?"
 
 Eh bien cela est tout à fait possible, exemple:
 {{< highlight python>}}
@@ -649,7 +646,7 @@ f.close()
 Pour lire-écrire, ouvrez le fichier avec 'r+' au lieu de 'r'. Pour l'écriture seule, 'w'.
 
 {{< note important >}}
-Ouvrir en écriture un fichier existant, **l'efface**. Pour ajouter des choses à la fin d'un fichier on utilise 'a' (pour append)
+Ouvrir en écriture un fichier existant **l'efface**. Pour ajouter des choses à la fin d'un fichier on utilise 'a' (pour append)
 {{< /note >}}
 
 
@@ -666,7 +663,7 @@ f.close()
 Revenons un moment sur les bonnes pratiques, et notamment de la [PEP8](https://www.python.org/dev/peps/pep-0008/).
 
 
-Voici quelques conventions de bonne pratique à mettre en place :
+Voici quelques conventions de bonnes pratiques à mettre en place :
 
   - Les indentations se font avec 4 espaces par niveau.
   - Les imports se font librairie par librairie: www.python.org/dev/peps/pep-0008/#imports
@@ -680,7 +677,7 @@ Il faut se souvenir qu'un nom doit être **clair et informatif** cela permet une
 
 Un [corrigé](https://forge.centrale-marseille.fr/projects/algorithmie_corrigf/files) est disponible au besoin.
 
-### J'aimerai tant voir Syracuse 
+### J'aimerais tant voir Syracuse 
 
 On vous demande de vérifier expérimentalement la [conjecture de Syracuse](https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse) pour les 1337 premiers nombres.
 
@@ -690,11 +687,11 @@ Vous allez faire un algorithme qui permet de rechercher une chaîne de caractèr
 
 ### Petites récréations mathématiques
 
-Le [projet euler](https://projecteuler.net) propose toute une série de petits problèmes mathématiques que 'on peut résoudre algorithmiquement. Cela peut être un bon moyen de s'entrainer si l'on est pas allergique à ce genre de problèmes.
+Le [Projet Euler](https://projecteuler.net) propose toute une série de petits problèmes mathématiques que l'on peut résoudre algorithmiquement. Cela peut être un bon moyen de s'entraîner si on n'est pas allergique à ce genre de problèmes.
 
 ### Récursion et objets 
 
-Réaliser une fonction récursif qui résout le problème des [tours de Hanoï](https://fr.wikipedia.org/wiki/Tours_de_Hanoï). Cette fonction prendra en paramètre 3 listes correspondants aux tours de départ, d'arrivée et intermédiaire et un nombre correspondant au nombre de segment de tour à déplacer.
+Réalisez une fonction récursive qui résout le problème des [tours de Hanoï](https://fr.wikipedia.org/wiki/Tours_de_Hanoï). Cette fonction prendra en paramètre 3 listes correspondants à l'état des tours de départ, d'arrivée et intermédiaire et un nombre correspondant au nombre de segments de tour à déplacer.
 
 ### Utilisation de modules 
 
@@ -702,5 +699,5 @@ Ici, on considère que vous savez vous débrouiller. On va donc vous laisser goo
 
 On vous demande de tester les performances d'un algorithme de tri particulier, le tri par sélection.
 
-  - implémentez le tri par insertion (une fonction prenant comme paramètre une liste qui sera triée).
-  - affichez (avec `matplotlib`) le temps mis pour trier des tableaux aléatoire de tailles différentes (un tableau de taille n contenant tous les nombres de 0 à n-1 dans un ordre aléatoire par exemple). En abscisse la taille de la liste et en ordonnée le temps mis à les trier (on pourra utiliser le module `datetime`).
+  - Implémentez le tri par insertion (une fonction prenant comme paramètre une liste qui sera triée).
+  - Affichez (avec `matplotlib`) le temps mis pour trier des tableaux aléatoires de tailles différentes (un tableau de taille n contenant tous les nombres de 0 à n-1 dans un ordre aléatoire par exemple). Dessinez une courbe avec en abscisse la taille de la liste et en ordonnée le temps mis à les trier (on pourra utiliser le module `datetime`).

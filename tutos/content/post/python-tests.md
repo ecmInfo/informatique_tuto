@@ -22,12 +22,12 @@ weight = 3
 ## Introduction
 
 
-Nous devons être certains que toutes les méthodes, fonctions ou modules que nous créons soient corrects. On écrira donc des tests pour être moralement sûrs que nos programmes fonctionnent (la plupart du temps une preuve de code est illusoire). 
+Nous devons être certains que toutes les méthodes, fonctions ou modules que nous créons sont corrects. On écrira donc des tests pour être moralement sûrs que nos programmes fonctionnent (la plupart du temps une preuve de code est illusoire). 
 
-Pour éviter de retaper tous ces tests à chaque modification du code (ce qui arrive souvent lorsque un algorithme ou une application est utilisée longtemps) ou à chaque découverte de bug, ils sont conservés dans un fichier à part. Ceci nous permettra d'exécuter ces tests à loisir (c'est à dire très souvent) et d'être sûrs que **tous** les tests seront exécutés. Ces  [tests sont dit unitaires]([https://fr.wikipedia.org/wiki/Test_unitaire) et sont essentiels dans toutes les pratiques courantes de code.
+Pour éviter de retaper tous ces tests à chaque modification du code (ce qui arrive souvent lorsqu'un algorithme ou une application est utilisée longtemps) ou à chaque découverte de bug, ils sont conservés dans un fichier à part. Ceci nous permettra d'exécuter ces tests à loisir (c'est à dire très souvent) et d'être sûrs que **tous** les tests seront exécutés. Ces  [tests sont dit unitaires]([https://fr.wikipedia.org/wiki/Test_unitaire) et sont essentiels dans toutes les pratiques courantes de code.
 
 
-De nombreux framework de tests existent pour python le plus connu étant certainement [unittest](https://docs.python.org/3/library/unittest.html), ou encore [nose](http://nose.readthedocs.io/en/latest/). Nous allons utiliser [py.test](http://pytest.org).
+De nombreux frameworks de tests existent pour python, le plus connu étant certainement [unittest](https://docs.python.org/3/library/unittest.html), ou encore [nose](http://nose.readthedocs.io/en/latest/). Nous allons utiliser [py.test](http://pytest.org).
 
 
 >Une très bonne introduction au développement par les tests est l'inusable Test Driven Development: By Example de Kent Beck. Tous les exemples sont en revanche en Java. 
@@ -37,7 +37,7 @@ Sinon en python mais orienté développement web, il y a le bon (mais il faut s'
 ## Un exemple
 
 
-Créez un nouveau projet avec pycharm que l'on pourra appeler `essai_tests`, puis ajoutez-y un fichier que vous nommerez `aide_mathematiques.py`. Ce fichier contiendra le code suivant :
+Créez un nouveau projet avec PyCharm que l'on pourra appeler `essai_tests`, puis ajoutez-y un fichier que vous nommerez `aide_mathematiques.py`. Ce fichier contiendra le code suivant :
 {{< highlight python>}}
 
 def double(entier):
@@ -54,7 +54,7 @@ Ma méthode sera exacte.
 On utilise le mot clé [assert](http://www.tutorialspoint.com/python/assertions_in_python.htm) pour créer notre fonction de test. 
 
 {{< note warning >}}
-Les fonctions de tests doivent toutes commencer par ''test_''
+Les fonctions de tests doivent toutes commencer par ''test_''.
 {{< /note>}}
 
 Ajouter la méthode ci-après à votre fichier :
@@ -101,7 +101,7 @@ Nous allons demander à l'environnement [py.test](http://pytest.org/latest/) d'e
 Commencez par supprimer l'exécution de `test_double` dans le fichier `test_aide_mathematiques.py`. 
 
 {{< note important>}}
-Un fichier de test ne doit contenir que des fonctions.
+Un fichier de tests ne doit contenir que des fonctions.
 {{< /note>}}
 
 
@@ -117,16 +117,16 @@ Puis nous allons demander à [Pycharm](https://www.jetbrains.com/pycharm/) d'ex�
 Une fois ceci configuré, cliquez sur le bouton {{< menu_code >}}OK{{< /menu_code >}}.
 
 
-Un nouvel environnement de test est créé dans le menu {{< menu_code >}}run{{< /menu_code >}}. Exécutez le. Vous devriez voir une nouvelle fenêtre en bas de l'écran pycharm apparaître et vos tests s'exécuter. Si tout s'est bien passé, une barre verte doit apparaître.
+Un nouvel environnement de tests est créé dans le menu {{< menu_code >}}run{{< /menu_code >}}. Exécutez le. Vous devriez voir une nouvelle fenêtre en bas de l'écran PyCharm apparaître et vos tests s'exécuter. Si tout s'est bien passé, une barre verte doit apparaître.
 
 Pour finir cette partie :
 
-  *  séparez votre fonction de tests en 2 fonctions (chaque fonction de test ne doit contenir qu'une chose à tester, donc a priori qu'un seul `assert`,
-  * exécutez votre nouvel environnement
-  * ajoutez une fonction de test qui plante. Exécutez votre environnement de test. Voyez la barre rouge. Supprimez ce test non valide.
+  * Séparez votre fonction de tests en 2 fonctions (chaque fonction de test ne doit contenir qu'une chose à tester, donc a priori qu'un seul `assert`).
+  * Éxécutez votre nouvel environnement.
+  * Ajoutez une fonction de test qui plante. Exécutez votre environnement de test. Voyez la barre rouge. Supprimez ce test non valide.
 
 
 ## Les tests en ligne de commande
  
  
-La bibliothèque http://pytest.org peut directement s'exécuter depuis le terminal. En supposant que votre fichier de test s'appelle ''test_aide_mathematiques.py'' et que vous vous trouviez dans le bon répertoire, la commande : `python3 -m pytest test_aide_mathematiques.py` va exécuter vos tests, comme vous le feriez depuis yCharm.
+La bibliothèque http://pytest.org peut directement s'exécuter depuis le terminal. En supposant que votre fichier de test s'appelle ''test_aide_mathematiques.py'' et que vous vous trouviez dans le bon répertoire, la commande : `python3 -m pytest test_aide_mathematiques.py` va exécuter vos tests, comme vous le feriez depuis PyCharm.

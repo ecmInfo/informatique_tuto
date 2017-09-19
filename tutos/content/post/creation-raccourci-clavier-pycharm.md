@@ -17,12 +17,20 @@ weight = 4
 
 De nombreuses actions disponibles via un menu dans [Pycharm](https://www.jetbrains.com/pycharm/) possèdent un raccourci clavier. 
 
+Par exemple, sous unix :
+
+  * Commenter une ligne ou un bloc: {{< menu_code >}}Ctrl + /{{< /menu_code >}} (Utiliser le {{< menu_code >}}/{{< /menu_code >}} du pavé numérique)
+  * Rechercher {{< menu_code >}}Ctrl + F{{< /menu_code >}}
+  * Exécuter le fichier actuel: {{< menu_code >}}Maj + F10{{< /menu_code >}}
+
+
 Nous allons monter dans ce tuto comment les connaître et comment les modifier au besoin.
 
 
 ## Trouver les raccourcis
 
 L'utilisation des raccourci clavier est décrite dans  l'aide en ligne de Pycharm sur les [keymap](https://www.jetbrains.com/help/pycharm/keymap.html).
+
 
 ### Connaître un raccourci clavier
 

@@ -27,12 +27,13 @@ Un petit rappel des bases de la programmation en python que vous êtes sensés s
 
 ## Les données
 
-[Documentation correspondante](https://docs.python.org/3.4/library/stdtypes.html#built-in-types).
+>Documentation correspondante](https://docs.python.org/3.4/library/stdtypes.html#built-in-types).
 
 
 
->Les commentaires en Python se font à l'aide de `#`.
-
+{{< note >}}
+Les commentaires en Python se font à l'aide de `#`.
+{{< /note>}}
 
 ### Les 5 classes de base 
 
@@ -73,8 +74,9 @@ nom = objet
 A gauche de l’opérateur `=` se trouve un nom (en gros, quelque chose ne pouvant commencer par un nombre)
 et à droite un objet.
 
->
-**Un nom n'est __PAS__ une chaîne de caractères. Une chaîne de caractère est un objet alors qu’un nom n’est qu’un alias vers un objet.**
+{{< note warning >}}
+Un nom n'est **PAS** une chaîne de caractères. Une chaîne de caractère est un objet alors qu’un nom n’est qu’un alias vers un objet.
+{{< /note>}}
 
 Il est important de comprendre que l’opérateur d’affectation = n’est pas symétrique. A gauche des noms.
 
@@ -109,7 +111,7 @@ i, j = j, i
 
 #### Les listes 
 
-https://docs.python.org/3.4/tutorial/datastructures.html#more-on-lists
+> https://docs.python.org/3.4/tutorial/datastructures.html#more-on-lists
 
 ##### Création Directe 
 
@@ -141,7 +143,7 @@ Il n'est pas nécessaire de renseigner tous les champs.
 
 #### Les dictionnaires 
 
->Documentation: https://docs.python.org/3.4/library/stdtypes.html?highlight=dict#mapping-types-dict
+> https://docs.python.org/3.4/library/stdtypes.html?highlight=dict#mapping-types-dict
 
 
 Un dictionnaire (ou [tableau associatif](http://fr.wikipedia.org/wiki/Tableau_associatif)) permet d'associer des clés à des valeurs, ces clés pouvant être des chaines de caractères ou des nombres. C'est en gros comme une 'liste' où l'on remplace les indices par à peu près que l'on veut.
@@ -156,12 +158,12 @@ for cle in d:
     print("cle :", cle, "valeur :", d[cle])
 {{< /highlight >}}
 
-
-> Attention : Un dictionnaire n'est pas ordonné
-
+{{< note warning >}}
+Un dictionnaire n'est pas ordonné
+{{< /note >}}
 #### Les ensembles : set 
 
-https://docs.python.org/3.4/library/stdtypes.html?highlight=dict#set
+> https://docs.python.org/3.4/library/stdtypes.html?highlight=dict#set
 
 
 Un ensemble permet de garder des données en mémoire de manière non indexée. Contrairement aux listes, où l'on rangeait les éléments dans des cases distinctes, on ne peut **pas** accéder aux éléments d'un ensemble `d` avec `d[i]`.
@@ -202,7 +204,7 @@ Le **frozenset** est un set (ensemble), mais cette fois non mutable.
 
 ### comparaisons 
 
-https://docs.python.org/3.4/library/stdtypes.html#comparisons
+> https://docs.python.org/3.4/library/stdtypes.html#comparisons
 
 ### blocs
 
@@ -231,8 +233,9 @@ else:
 Ce code contient 3 blocs : le bloc principal, puis les 2 blocs de conditions (respectivement `if` et `else`).
 
 
-L’indentation est donc **__primordiale__** en python.
-
+{{<note important>}}
+L’indentation est  **primordiale** en python.
+{{</note>}}
 
 >Nous allons utiliser la convention classique : chaque bloc sera indenté de 4 espaces supplémentaire par
 rapport au bloc parent. Pour ne pas passer son temps à compter les espaces à ajouter pour chaque bloc,
@@ -243,7 +246,7 @@ En python, toute ligne définissant un nouveau bloc doit être terminée par le 
 
 ### Conditions si/sinon si/sinon (if/elif/else) 
 
-https://docs.python.org/3/reference/compound_stmts.html#the-if-statement
+> https://docs.python.org/3/reference/compound_stmts.html#the-if-statement
 
 
 Exemple :
@@ -263,7 +266,7 @@ Il est à noter que elif et else sont optionnels.
 
 ### Boucle while 
 
-https://docs.python.org/3/reference/compound_stmts.html#the-while-statement
+> https://docs.python.org/3/reference/compound_stmts.html#the-while-statement
 
 
 {{< highlight python>}}
@@ -341,7 +344,7 @@ for mot in l:
 ### Les fonctions 
 
 #### Motivations 
-https://docs.python.org/3/reference/compound_stmts.html#function-definitions
+> https://docs.python.org/3/reference/compound_stmts.html#function-definitions
 
 
 Il n'est jamais bon de copier/coller un bout de programme qui se répète plusieurs fois (corriger un problème dans ce bout de code reviendrait à le corriger autant de fois qu'il a été dupliqué...). Il est de plus souvent utile de séparer les éléments logiques d'un programme en unités autonomes, ceci rend le programme plus facile à relire.
@@ -368,8 +371,9 @@ Ensuite vient le bloc fonction en lui même qui ne contient qu'une seule ligne.
 
 Si on exécute le bloc précédent, il ne se passe rien. En effet on n'a fait que définir la fonction. Pour l'utiliser, ajoutez `bonjour()` à la suite du bloc.
 
->Une **fonction** s'utilise toujours en faisant suivre son nom d'une parenthèse contenant ses paramètres séparés par une virgule (notre fonction n'a pour l'instant pas de paramètres). Donner juste son nom ne suffit pas à l'invoquer.
-
+{{<note important>}}
+Une **fonction** s'utilise toujours en faisant suivre son nom d'une parenthèse contenant ses paramètres séparés par une virgule (notre fonction n'a pour l'instant pas de paramètres). Donner juste son nom ne suffit pas à l'invoquer.
+{{</note>}}
 
 #### Paramètres d'une fonction 
 
@@ -384,8 +388,9 @@ def plus_moins(nombre):
 Cette fonction nécessite donc un paramètre pour être invoquée. Testez alors `plus_moins(17)`
 La variable nombre sera associée à l'objet entier de valeur 17 dans la fonction. La variable nombre n'existe que dans la fonction.
 
->Les *paramètres* d'une fonction sont des __**NOMS**__ de variables qui ne seront connus qu'à l'intérieur de la fonction. À l'exécution de la fonction, le nom de chaque paramètre est associé à l'objet correspondant.
-
+{{< note warning>}}
+Les *paramètres* d'une fonction sont des __**NOMS**__ de variables qui ne seront connus qu'à l'intérieur de la fonction. À l'exécution de la fonction, le nom de chaque paramètre est associé à l'objet correspondant.
+{{< /note >}}
 
 #### Retour d'une fonction 
 
@@ -410,7 +415,9 @@ Le code précédent exécute la fonction de nom `double` avec comme paramètre u
 
 Cette valeur retournée est utilisée par la commande `print` pour être affichée à l'écran.
 
-> Les noms de paramètres d'une fonction et les variables déclarée à l'intérieur de la fonction n'existent qu'à l'intérieur de celle-ci. En dehors de ce blocs, ces variables n'existent plus.
+{{< note warning >}}
+Les noms de paramètres d'une fonction et les variables déclarée à l'intérieur de la fonction n'existent qu'à l'intérieur de celle-ci. En dehors de ce blocs, ces variables n'existent plus.
+{{< /note >}}
 
 #### Fonctions v.s. méthodes 
 
@@ -468,8 +475,9 @@ print(parametre)
 {{< /highlight >}}
 
 
-> **Les noms déclarés dans une fonction, y compris ses paramètres, restent dans la fonction.**
-
+{{< note warning >}}
+Les noms déclarés dans une fonction, y compris ses paramètres, restent dans la fonction.
+{{< /note >}}
 
 ### Récursion 
 
@@ -502,9 +510,10 @@ La figure précédente montre ce qu'il s'est passé dans le monde des noms et de
 Un *module* (aussi appelé *bibliothèque* ou *library*) est un ensemble de fonctions utiles, utilisable dans de nombreux programmes. Plutôt que de refaire à chaque fois ces fonctions ou (c'est pire) de les copier/coller dans chaque programme on les importe directement pour les utiliser.
 
 
+{{< note >}}
 Il existe de nombreux modules, réalisant une foultitude d'opérations. Avant de se mettre à coder quelque chose, commencez toujours par vérifier (google
- est votre ami) s'il n'existe pas un module tout fait, vous gagnerez du temps. Python en fournit déjà de [nombreux](https://docs.python.org/3/library/index.html).
- 
+ est votre ami) s'il n'existe pas un module tout fait, vous gagnerez du temps. Python en fournit déjà de [nombreux : https://docs.python.org/3/library/index.html
+{{< /note>}}
 
 Pour utiliser un module, il faut commencer par l'importer avec la commande `import`. Par exemple avec le module `math`.
 
@@ -550,7 +559,7 @@ Si vous n'avez pas de droits administrateur, ou pour une utilisation plus "pro" 
 
 ##### Le module random
 
-https://docs.python.org/3/library/random.html
+> https://docs.python.org/3/library/random.html
 
 
 Regardez [ces exemples](http://www.dsimb.inserm.fr/~fuchs/python/python-node9.html) Pour le module random.
@@ -559,7 +568,7 @@ Installé par défaut, permet notamment de mélanger les éléments d'une liste,
 
 ##### openpyxl 
 
-http://openpyxl.readthedocs.org
+> http://openpyxl.readthedocs.org
 
 permet de manipuler des [fichiers excel avec python](https://automatetheboringstuff.com/chapter12/).
 
@@ -568,14 +577,14 @@ Il s'installe avec pip3: `pip3 install openpyxl` (ou `sudo pip3 install openpyxl
 
 ##### matplotlib 
 
-http://matplotlib.org
+> http://matplotlib.org
 
 
 Installé sur les salles machines de l'école, ce module permet d'afficher des graphiques en python. 
 
 ##### Jupyter 
 
-http://jupyter.org
+> http://jupyter.org
 
 Permet d'utiliser python de façon interactive (il s'installe aisément avec pip3 par exemple) 
 
@@ -603,7 +612,7 @@ Ce programme affichera alors 42 ! Essayez-le pour vous en persuader.
 
 ## Les fichiers : lecture, écriture 
 
-https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
+> https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 
 ### Lecture 
@@ -639,7 +648,10 @@ f.close()
 
 Pour lire-écrire, ouvrez le fichier avec 'r+' au lieu de 'r'. Pour l'écriture seule, 'w'.
 
-> Ouvrir en écriture un fichier existant, **l'efface**. Pour ajouter des choses à la fin d'un fichier on utilise 'a' (pour append)
+{{< note important >}}
+Ouvrir en écriture un fichier existant, **l'efface**. Pour ajouter des choses à la fin d'un fichier on utilise 'a' (pour append)
+{{< /note >}}
+
 
 Utilisez ensuite la méthode `write()`:
 

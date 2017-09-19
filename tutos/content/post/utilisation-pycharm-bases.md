@@ -38,8 +38,10 @@ On suppose que vous êtes installé devant un ordinateur d'une salle machine Lin
 
 Pycharm se trouve dans le menu {{< menu_code >}}Application > programmation > Pycharm Community Edition{{< /menu_code >}}.
 
->Si c'est votre première utilisation de Pycharm : **ON SE RETIENT D'APPUYER SUR OK SANS RIEN LIRE LORSQUE LA PREMIÈRE FENÊTRE APPARAIT** (je sais, c'est dur)
 
+{{< note warning >}}
+Si c'est votre première utilisation de Pycharm : **ON SE RETIENT D'APPUYER SUR OK SANS RIEN LIRE LORSQUE LA PREMIÈRE FENÊTRE APPARAIT** (je sais, c'est dur)
+{{< /note >}}
 ### via le terminal
 
 Un [terminal](https://fr.wikipedia.org/wiki/Shell_Unix) est une fenêtre permettant d'exécuter des commandes. Nous allons l'utiliser ici pour exécuter Pycharm.  Sur la barre des tâches en haut à gauche de l'écran :
@@ -141,7 +143,28 @@ print("hello world!")
 
 Exécuter un fichier se fait *via* le menu {{< menu_code >}}Run{{< /menu_code >}}. Il y a deux commandes Run dans ce menu : {{< menu_code >}}Run nom_fichier{{< /menu_code >}} et {{< menu_code >}}Run...{{< /menu_code >}}. Le second permet de choisir le fichier à exécuter. Une fois choisi, son nom apparaîtra en haut à droite de la fenêtre, à côté du triangle vert permettant de l'exécuter. 
 
-> Il est ainsi possible de travailler sur un fichier et d'en exécuter un autre en cliquant sur le triangle vert. C'est très pratique lorsque l'on travaille sur une méthode et que l'on exécute les tests de celle-ci présent dans un autre fichier.
+{{< note >}}
+Il est ainsi possible de travailler sur un fichier et d'en exécuter un autre en cliquant sur le triangle vert. C'est très pratique lorsque l'on travaille sur une méthode et que l'on exécute les tests de celle-ci présent dans un autre fichier.
+{{< /note >}}
+
+## Environnement d'exécution 
+
+
+Les environnement d'exécutions permettent d'exécuter des programmes ou des tests python. On les trouve soit grace à la barre de menu, item {{< menu_code >}} Run{{< /menu_code >}}, ou en haut à droite de la fenêtre (son nom puis un petit triangle vert pour exécuter l'environnement).  
+
+Pour créer un nouvel environnement d'exécution :
+
+  - créez un nouveau contexte d'exécution dans le menu {{< menu_code >}}run > edit configuration...{{< /menu_code >}}
+  - la fenêtre qui s'est ouverte contient tous les contextes d'exécution de votre projet. Cliquez sur le {{< menu_code >}}+{{< /menu_code >}} en haut à gauche de la fenêtre pour en créer un nouveau.
+  - choisissez {{< menu_code >}}python{{< /menu_code >}} si vous voulez exécuter du code ou {{< menu_code >}}python tests{{< /menu_code >}} pour un framework de test, paramètrez votre environnement en choisissant le script à exécuter (on pourra également nommer son environnement).
+  - cliquer sur {{< menu_code >}}OK{{< /menu_code >}} pour créer l'environnement.
+
+{{< note warning >}}
+Dans la fenêtre de gestion des contextes, ne modifiez pas les contextes par défaut. Ce sont des templates.
+{{< /note >}}
+
+Pour plus d'information, reportez vous à [la documentation de pycharm](https://www.jetbrains.com/help/pycharm/2016.3/working-with-run-debug-configurations.html?search=run).
+
 
 ## Préférences : changer d'interpréteur
 

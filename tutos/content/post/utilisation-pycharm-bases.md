@@ -113,7 +113,7 @@ Essayez d'avoir un peu d'ordre dans vos projets :
 
 ### Interpréteur
 
-C'est la version de python que vous utiliserez pour ce projet. Nous utiliserons **TOUJOURS** python3. Choisissez le donc. S'il n'est pas proposé par défaut, cliquez sur le triangle à droite et trouvez le dans la liste proposée (il est possible  d'[importer un interpréteur](#changer-et-importer-un-interpréteur) présent sur votre ordinateur si PyCharm ne le trouve pas) A l'ECM, nous avons à notre disposition la version 3.5 de python (à l'heure où ces lignes sont tapées). Chez vous, vous aurez certainement une version (encore) plus récente.
+C'est la version de python que vous utiliserez pour ce projet. Nous utiliserons **TOUJOURS** python3. Choisissez le donc. S'il n'est pas proposé par défaut, cliquez sur le triangle à droite et trouvez le dans la liste proposée (il est possible  d'[importer un interpréteur](#préférences-changer-d-interpréteur) présent sur votre ordinateur si PyCharm ne le trouve pas) A l'ECM, nous avons à notre disposition la version 3.5 de python (à l'heure où ces lignes sont tapées). Chez vous, vous aurez certainement une version (encore) plus récente.
 
 
 ## Créer et exécuter un fichier python
@@ -187,7 +187,30 @@ Pour créer un nouvel interpréteur à partir de la fenêtre de l'interpréteur,
 
 ![un projet vide](/img/pycharm/settings/engrenage.png)
 
-Si l'on veut ajouter un programme python déjà présent sur la machine, on choisit {{< menu_code >}}Add Local...{{< /menu_code >}} puis on navigue vers le dossier contenant le programme python à installer (souvent le programme `python3` dans le dossier `/usr/local/bin` dans le monde unix ou mac)
+Si l'on veut ajouter un programme python déjà présent sur la machine, on choisit {{< menu_code >}}Add Local...{{< /menu_code >}}.
+
+Une nouvelle fenêtre s'affiche : 
+
+![ajout d'un interpréteur](/img/pycharm/settings/nouvel_interpreteur_venv.png)
+
+Attention, par défaut `virtualenv environment` (en haut à gauche de la fenêtre) est utilisé. Dans l'absolu [c'est très bien](http://sametmax.com/les-environnement-virtuels-python-virtualenv-et-virtualenvwrapper/), mais pour nous, ca va plus nous embêter qu'autre chose (en particulier il faudrait réinstaller numpy à chaque tp...). On choisi donc `system interpréteur` et un python 3 d'installé : 
+
+![interpréteur python](/img/pycharm/settings/interpreteur_python.png)
+
+
+Dans l'image ci-dessus, mon interpréteur python3 (python3.6) était dans le dossier `/usr/local/bin` (ce qui est souvent le cas dans le monde unix ou mac)
+
+### Installer des modules
+
+On commence par aller trouver son interpréteur *via* le menu {{< menu_code >}}File > Settings...{{< /menu_code >}} (je l'ai trouvé en tapant `interp` dans l'onglet de recherche) : 
+
+![python](/img/pycharm/settings/interpreteur_par_recherche.png)
+
+Les packages installé sont listé dans la fenêtre, avec le numéro de version installé et la dernère version disponible. Pour installer le package `numpy` on commence par cliquer sur le bouton `+` en bas à gauche de la fenêtre. Un zillion de package sont disponible. On cherche numpy : 
+
+![python](/img/pycharm/settings/package_numpy.png)
+
+On peut ensuite cliquer sur `install package` en bas à gauche pour installer le package.
 
 ## Aide en ligne
 
